@@ -30,7 +30,7 @@ function displayEmployees(employeeData){
     let employeeHTML = '';
 
     //loop through each employee and create HTML markup
-    employees.forEach((employee, index) => {
+    employees.map((employee, index) => {
         let name = employee.name;
         let email = employee.email;
         let city = employee.location.city;
@@ -38,15 +38,16 @@ function displayEmployees(employeeData){
 
         employeeHTML += `
         <div class="card" data-index="${index}">
-        <img class="avatar" src="${picture.large}" />
-        <div class="text-container">
-        <h2 class="name">${name.first}${name.last}</h2>
-        <p class="email">${email}</p>
-        <p class="address">${city}</p>
-        </div>
+          <img class="avatar" src="${picture.large}" />
+            <div class="text-container">
+                <h2 class="name">${name.first}${name.last}</h2>
+                <p class="email">${email}</p>
+                <p class="address">${city}</p>
+            </div>
         </div>
         `
     });
+    gridContainer.innerHTML = employeeHTML;
 }
 
 function displayModal(index){
@@ -61,6 +62,8 @@ function displayModal(index){
         <p class="email">${email}</p>
         <p class="address">${city}</p>
         <hr />
+        <p>${phone}</p>
+        <p class="address">${street.number}${street.name}, ${state} ${postcode}</p>
         <p>Birthday: 
         ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
     </div>

@@ -37,9 +37,10 @@ header,
     background: var(--white);
     border-radius: 5px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     border: 1px solid var(--white);
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
+    padding: 15px;
 }
 .card:hover{
     /* border: solid 1px var(--medium-grey); */
@@ -53,7 +54,7 @@ header,
     display:flex;
     flex-direction: column;
     justify-content: center;
-    margin: 15px 0px;
+    margin: 15px 0 15px 15px;
 }
 .overlay {
     position: absolute;
@@ -61,11 +62,12 @@ header,
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(100, 100, 100, 0.4)
+    background: rgba(100, 100, 100, 0.4);
+    height: 100vh;
 }
 .modal {
     width: 375px;
-    margin: 15% auto atuo;
+    margin: 15% auto auto;
     position: relative;
     text-align: center;
     background: var(--white);
