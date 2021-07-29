@@ -26,9 +26,9 @@ header,
 }
 .grid-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 20px;
-    grid-column-gap: 5rem;
+    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 30px;
 }
 .avatar{
     border-radius: 50%;
@@ -38,7 +38,7 @@ header,
     border-radius: 5px;
     display: flex;
     justify-content: space-evenly;
-    border: 1px solid var(--white);
+    border: 2px solid rgb(180, 180, 180);
     transition: all .2s ease-in-out;
     padding: 15px;
 }
@@ -64,10 +64,11 @@ header,
     bottom: 0;
     background: rgba(100, 100, 100, 0.4);
     height: 100vh;
+    margin-top: -15px;
 }
 .modal {
     width: 375px;
-    margin: 15% auto auto;
+    margin: 10% auto auto;
     position: relative;
     text-align: center;
     background: var(--white);
@@ -80,6 +81,9 @@ header,
     right: 15px;
     top: 5px;
     cursor: pointer;
+}
+hr{
+    width: 80%;
 }
 .hidden{
     display: none;
