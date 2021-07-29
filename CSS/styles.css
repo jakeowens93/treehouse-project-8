@@ -38,6 +38,13 @@ header,
     border-radius: 5px;
     display: flex;
     justify-content: center;
+    border: 1px solid var(--white);
+    transition: all .3s ease-in-out;
+}
+.card:hover{
+    /* border: solid 1px var(--medium-grey); */
+    box-shadow: 2px 2px 8px var(--dark-grey);
+    transform: scale(1.03);
 }
 .card p, h2{
     margin: 5px 0;
