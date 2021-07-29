@@ -19,6 +19,13 @@ h1, h2 {
 p {
     color: var(--medium-grey);
 }
+.header{
+    margin-bottom: 10px;
+}
+.search{
+    height: 25px;
+    padding-left: 7px;
+}
 header, 
 .grid-container{
     width: 85vw;
