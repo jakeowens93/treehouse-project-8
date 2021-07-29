@@ -1,0 +1,77 @@
+:root{
+    --white: #fff;
+    --light-grey: rgb(236, 234, 234);
+    --medium-grey: rgb(128, 128, 128);
+    --dark-grey: rgb(75, 75, 75);
+}
+
+*{
+    font-family: 'Hind Siliguri', sans-serif;
+}
+body{
+    position: relative;
+    background: var(--light-grey);
+}
+h1, h2 {
+    color: var(--dark-grey);
+    font-size: 1.3em;
+}
+p {
+    color: var(--medium-grey);
+}
+header, 
+.grid-container{
+    width: 85vw;
+    margin: auto;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 20px;
+    grid-column-gap: 5rem;
+}
+.avatar{
+    border-radius: 50%;
+}
+.card{
+    background: var(--white);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+.card p, h2{
+    margin: 5px 0;
+}
+.text-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px 0px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(100, 100, 100, 0.4)
+}
+.modal {
+    width: 375px;
+    margin: 15% auto atuo;
+    position: relative;
+    text-align: center;
+    background: var(--white);
+    border: 1px solid #778;
+    border-radius: 5px;
+    padding: 30px 20px;
+}
+.modal-close {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    cursor: pointer;
+}
+.hidden{
+    display: none;
+}
