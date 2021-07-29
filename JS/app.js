@@ -8,11 +8,15 @@ const gridContainer = document.querySelector(".grid-container");
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
+const arrowLeft = document.querySelector(".arrow-l");
+const arrowRight = document.querySelector(".arrow-r");
+const cards = document.querySelectorAll('.card');
+let modalIndex;
+
 
 //
 // Fetch
 //
-
 fetch(urlAPI)
     .then(res => res.json())
     .then(res => res.results)
@@ -70,6 +74,7 @@ function displayModal(index){
     `;
     overlay.classList.remove("hidden");
     modalContainer.innerHTML = modalHTML;
+    modalIndex = index;
 }
 
 gridContainer.addEventListener("click", e=>{
@@ -84,3 +89,30 @@ if(e.target !== gridContainer){
 modalClose.addEventListener('click', ()=>{
     overlay.classList.add('hidden');
 });
+
+//
+// Arrow Controls
+//
+arrowLeft.addEventListener('click', e =>{
+    if(modalIndex > 0){
+        modalIndex --;
+        displayModal(modalIndex)
+    } else {
+        modalIndex = 11;
+        displayModal(modalIndex);
+    }
+});
+
+arrowRight.addEventListener('click', e =>{
+    if(modalIndex < 11){
+        modalIndex ++;
+        displayModal(modalIndex)
+    } else { 
+        modalIndex = 0;
+        displayModal(modalIndex);
+    } 
+});
+
+//
+// Search Filter
+// 

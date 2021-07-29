@@ -82,6 +82,13 @@ header,
     top: 5px;
     cursor: pointer;
 }
+.arrows{
+    display: flex;
+    justify-content: space-between;
+}
+.btn:hover{
+    cursor: pointer;
+}
 hr{
     width: 80%;
 }
