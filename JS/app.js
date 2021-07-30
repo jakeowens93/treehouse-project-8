@@ -11,6 +11,7 @@ const modalClose = document.querySelector(".modal-close");
 const arrowLeft = document.querySelector(".arrow-l");
 const arrowRight = document.querySelector(".arrow-r");
 const cards = document.querySelectorAll('.card');
+const search = document.querySelector('#search');
 let modalIndex;
 
 
@@ -53,7 +54,9 @@ function displayEmployees(employeeData){
     });
     gridContainer.innerHTML = employeeHTML;
 }
-
+//
+// Display Modal Function
+//
 function displayModal(index){
     // use object destructuring to make template literal cleaner
     let {name, dob, phone, email, location: {city, street, state, postcode}, picture} = employees[index];
@@ -116,3 +119,18 @@ arrowRight.addEventListener('click', e =>{
 //
 // Search Filter
 // 
+const searchHandler = event => {
+    const cardName = document.querySelectorAll('h2.name');
+    const searchTerm = event.target.value.toLowerCase();
+
+    cardName.forEach( cardName => {
+        const cardText = cardName.textContent.toLowerCase();
+        const card = cardName.parentElement.parentElement;
+
+        if (cardText.includes(searchTerm)) {
+            card.style.display = "block";
+        } else {
+            card.style.display ="none";
+        }
+    });
+}
