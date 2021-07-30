@@ -128,7 +128,7 @@ const searchHandler = event => {
         const card = cardName.parentElement.parentElement;
 
         if (cardText.includes(searchTerm)) {
-            card.style.display = "flex";
+            card.style.display = "";
         } else {
             card.style.display ="none";
         }
