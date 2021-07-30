@@ -52,7 +52,7 @@ header,
 }
 .card:hover{
     /* border: solid 1px var(--medium-grey); */
-    box-shadow: 2px 2px 8px var(--dark-grey);
+    box-shadow: 2px 4px 8px var(--dark-grey);
     transform: scale(1.03);
 }
 .card p, h2{

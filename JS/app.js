@@ -128,9 +128,10 @@ const searchHandler = event => {
         const card = cardName.parentElement.parentElement;
 
         if (cardText.includes(searchTerm)) {
-            card.style.display = "block";
+            card.style.display = "flex";
         } else {
             card.style.display ="none";
         }
     });
 }
+search.addEventListener('keyup', searchHandler);
